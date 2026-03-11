@@ -401,6 +401,9 @@
   .opacity-\[0\.2\] {
     opacity: 0.2;
   }
+  .opacity-\[0\.9\] {
+    opacity: 0.9;
+  }
   .md\:grid-cols-2 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -835,6 +838,7 @@ header {
   border-style: var(--tw-border-style);
   border-width: 1px;
   border-color: var(--color-04);
+  background-color: var(--color-white);
   padding: calc(var(--spacing) * 8);
 }
 .service-icon {
@@ -889,6 +893,18 @@ header {
   border-style: var(--tw-border-style);
   border-width: 1px;
   border-color: var(--color-04);
+  padding: calc(var(--spacing) * 6);
+}
+.yn-area {
+  background-color: var(--color-02);
+  padding-block: calc(var(--spacing) * 25);
+}
+.single-yn-list {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 2.75);
+  border-radius: var(--radius-2xl);
+  background-color: #232323;
   padding: calc(var(--spacing) * 6);
 }
 @property --tw-rotate-x {

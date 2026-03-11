@@ -226,7 +226,7 @@ header{
     @apply text-center flex flex-col gap-4;
 }
 .single-service-list{
-    @apply p-8 flex flex-col gap-2.75 border-1 border-04 rounded-2xl relative;
+    @apply p-8 flex flex-col gap-2.75 border-1 border-04 rounded-2xl relative bg-white;
 }
 .service-icon {
     @apply absolute top-8 right-8 size-16;
@@ -262,5 +262,13 @@ header{
 }
 
 .single-ha-list{
-    @apply p-6 flex flex-col gap-2.75 border-1 border-04 rounded-2xl;
+    @apply p-6 flex flex-col gap-2.75 border-1 border-04 rounded-2xl ;
+}
+
+/*--------------------Your Needs ---------------------- */
+.yn-area{
+    @apply bg-02 py-25;
+}
+.single-yn-list{
+    @apply p-6 flex flex-col gap-2.75 bg-[#232323] rounded-2xl ;
 }
