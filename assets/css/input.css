@@ -75,6 +75,10 @@ body{
     @apply xl:max-w-300 mx-auto lg:max-w-230 lg:px-0 md:px-8 px-4; 
 }
 
+.btn{
+    @apply py-3 px-5 inline-block bg-primary text-white rounded-[40px] border-r-3 border-b-3 border-black font-medium text-sm leading-4 tracking-[-0.28px];
+}
+
 
 /*============================= Header Area ============================ */
 header{
@@ -136,6 +140,9 @@ header{
 }
 .hero-intro p span{
     @apply text-primary;
+}
+.hero-content{
+    @apply flex flex-col gap-8;
 }
 .hero-intro{
     @apply max-w-205 mx-auto flex flex-col justify-center gap-4;

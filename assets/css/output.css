@@ -219,6 +219,9 @@
   .w-5 {
     width: calc(var(--spacing) * 5);
   }
+  .w-full {
+    width: 100%;
+  }
   .border-collapse {
     border-collapse: collapse;
   }
@@ -246,6 +249,9 @@
   }
   .bg-02 {
     background-color: var(--color-02);
+  }
+  .text-center {
+    text-align: center;
   }
   .text-primary {
     color: var(--color-primary);
@@ -321,6 +327,27 @@ body {
   @media (width >= 80rem) {
     max-width: calc(var(--spacing) * 300);
   }
+}
+.btn {
+  display: inline-block;
+  border-radius: 40px;
+  border-right-style: var(--tw-border-style);
+  border-right-width: 3px;
+  border-bottom-style: var(--tw-border-style);
+  border-bottom-width: 3px;
+  border-color: var(--color-black);
+  background-color: var(--color-primary);
+  padding-inline: calc(var(--spacing) * 5);
+  padding-block: calc(var(--spacing) * 3);
+  font-size: var(--text-sm);
+  line-height: var(--tw-leading, var(--text-sm--line-height));
+  --tw-leading: calc(var(--spacing) * 4);
+  line-height: calc(var(--spacing) * 4);
+  --tw-font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-medium);
+  --tw-tracking: -0.28px;
+  letter-spacing: -0.28px;
+  color: var(--color-white);
 }
 header {
   background-size: cover;
@@ -440,6 +467,11 @@ header {
 }
 .hero-intro p span {
   color: var(--color-primary);
+}
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 8);
 }
 .hero-intro {
   margin-inline: auto;
