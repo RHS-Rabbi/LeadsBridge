@@ -78,7 +78,7 @@ body{
 
 /*============================= Header Area ============================ */
 header{
-    @apply py-6 bg-white;
+    @apply py-6 bg-cover bg-center bg-no-repeat;
 }
 .site-logo{
     @apply size-8 overflow-hidden;
@@ -125,4 +125,21 @@ header{
 
 .mainmenu ul li .active, .mainmenu-mobile ul li .active{
     @apply text-primary;
+}
+
+/*----------------------- Hero Area ------------------------*/
+.hero-area{
+    @apply pt-30 py-50;
+}
+.hero-intro p{
+    @apply text-base tracking-[0.32px] font-normal leading-6 not-italic;
+}
+.hero-intro p span{
+    @apply text-primary;
+}
+.hero-intro{
+    @apply max-w-205 mx-auto flex flex-col justify-center gap-4;
+}
+.hero-content h1{
+    @apply text-72x text-center font-semibold leading-20 tracking-[-1.44px];
 }

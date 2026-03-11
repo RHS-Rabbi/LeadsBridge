@@ -16,6 +16,7 @@
     --text-base--line-height: calc(1.5 / 1);
     --font-weight-normal: 400;
     --font-weight-medium: 500;
+    --font-weight-semibold: 600;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
@@ -24,6 +25,7 @@
     --color-primary: #FFA500;
     --color-02: #151515;
     --color-03: #4F4D4D;
+    --text-72x: 4.5rem;
   }
 }
 @layer base {
@@ -220,11 +222,20 @@
   .border-collapse {
     border-collapse: collapse;
   }
+  .transform {
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
   .items-center {
     align-items: center;
   }
   .justify-between {
     justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
   }
   .rounded-full {
     border-radius: calc(infinity * 1px);
@@ -235,6 +246,9 @@
   }
   .bg-02 {
     background-color: var(--color-02);
+  }
+  .text-primary {
+    color: var(--color-primary);
   }
   .lg\:flex {
     @media (width >= 64rem) {
@@ -309,7 +323,9 @@ body {
   }
 }
 header {
-  background-color: var(--color-white);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding-block: calc(var(--spacing) * 6);
 }
 .site-logo {
@@ -407,6 +423,62 @@ header {
 .mainmenu ul li .active, .mainmenu-mobile ul li .active {
   color: var(--color-primary);
 }
+.hero-area {
+  padding-block: calc(var(--spacing) * 50);
+  padding-top: calc(var(--spacing) * 30);
+}
+.hero-intro p {
+  font-size: var(--text-base);
+  line-height: var(--tw-leading, var(--text-base--line-height));
+  --tw-leading: calc(var(--spacing) * 6);
+  line-height: calc(var(--spacing) * 6);
+  --tw-font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-normal);
+  --tw-tracking: 0.32px;
+  letter-spacing: 0.32px;
+  font-style: normal;
+}
+.hero-intro p span {
+  color: var(--color-primary);
+}
+.hero-intro {
+  margin-inline: auto;
+  display: flex;
+  max-width: calc(var(--spacing) * 205);
+  flex-direction: column;
+  justify-content: center;
+  gap: calc(var(--spacing) * 4);
+}
+.hero-content h1 {
+  text-align: center;
+  font-size: var(--text-72x);
+  --tw-leading: calc(var(--spacing) * 20);
+  line-height: calc(var(--spacing) * 20);
+  --tw-font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-semibold);
+  --tw-tracking: -1.44px;
+  letter-spacing: -1.44px;
+}
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
@@ -431,6 +503,11 @@ header {
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
       --tw-border-style: solid;
       --tw-leading: initial;
       --tw-font-weight: initial;
