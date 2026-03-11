@@ -89,6 +89,9 @@ body{
 .s-p{
     @apply text-lg font-normal leading-7 tracking-[-0.36px];
 }
+.s-p-2{
+    @apply text-lg font-normal leading-6.5 tracking-[-0.32px];
+}
 
 /*============================= Header Area ============================ */
 header{
@@ -203,4 +206,21 @@ header{
 }
 .wcu-right-image img{
     @apply size-full;
+}
+
+/*------------------------ Service  ---------------------------- */
+.service-area{
+    @apply py-25 bg-white;
+}
+.service-intro{
+    @apply flex flex-col gap-3;
+}
+.service-title{
+    @apply text-center flex flex-col gap-4;
+}
+.single-service-list{
+    @apply p-8 flex flex-col gap-2.75 border-1 border-04 rounded-2xl relative;
+}
+.service-icon {
+    @apply absolute top-8 right-8 size-16;
 }

@@ -227,11 +227,14 @@
   .table {
     display: table;
   }
-  .h-0 {
-    height: calc(var(--spacing) * 0);
-  }
   .h-0\.5 {
     height: calc(var(--spacing) * 0.5);
+  }
+  .h-12 {
+    height: calc(var(--spacing) * 12);
+  }
+  .w-0\.75 {
+    width: calc(var(--spacing) * 0.75);
   }
   .w-5 {
     width: calc(var(--spacing) * 5);
@@ -251,8 +254,8 @@
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
-  .resize {
-    resize: both;
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .flex-col {
     flex-direction: column;
@@ -278,6 +281,9 @@
   .gap-8 {
     gap: calc(var(--spacing) * 8);
   }
+  .gap-16 {
+    gap: calc(var(--spacing) * 16);
+  }
   .gap-20 {
     gap: calc(var(--spacing) * 20);
   }
@@ -290,6 +296,9 @@
   }
   .bg-02 {
     background-color: var(--color-02);
+  }
+  .bg-primary {
+    background-color: var(--color-primary);
   }
   .pt-10 {
     padding-top: calc(var(--spacing) * 10);
@@ -304,9 +313,16 @@
   .text-40x {
     font-size: var(--text-40x);
   }
+  .text-56x {
+    font-size: var(--text-56x);
+  }
   .leading-12 {
     --tw-leading: calc(var(--spacing) * 12);
     line-height: calc(var(--spacing) * 12);
+  }
+  .leading-16 {
+    --tw-leading: calc(var(--spacing) * 16);
+    line-height: calc(var(--spacing) * 16);
   }
   .font-normal {
     --tw-font-weight: var(--font-weight-normal);
@@ -324,6 +340,10 @@
     --tw-tracking: -0.36px;
     letter-spacing: -0.36px;
   }
+  .tracking-\[-1\.12px\] {
+    --tw-tracking: -1.12px;
+    letter-spacing: -1.12px;
+  }
   .text-02 {
     color: var(--color-02);
   }
@@ -339,31 +359,12 @@
   .uppercase {
     text-transform: uppercase;
   }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
-  .md\:max-w-6\/12 {
-    @media (width >= 48rem) {
-      max-width: calc(6 / 12 * 100%);
-    }
-  }
-  .md\:max-w-140 {
-    @media (width >= 48rem) {
-      max-width: calc(var(--spacing) * 140);
-    }
+  .opacity-\[0\.2\] {
+    opacity: 0.2;
   }
   .md\:grid-cols-2 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-  }
-  .md\:flex-row {
-    @media (width >= 48rem) {
-      flex-direction: row;
     }
   }
   .lg\:flex {
@@ -484,6 +485,16 @@ body {
   font-weight: var(--font-weight-normal);
   --tw-tracking: -0.36px;
   letter-spacing: -0.36px;
+}
+.s-p-2 {
+  font-size: var(--text-lg);
+  line-height: var(--tw-leading, var(--text-lg--line-height));
+  --tw-leading: calc(var(--spacing) * 6.5);
+  line-height: calc(var(--spacing) * 6.5);
+  --tw-font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-normal);
+  --tw-tracking: -0.32px;
+  letter-spacing: -0.32px;
 }
 header {
   background-size: cover;
@@ -726,6 +737,39 @@ header {
   width: 100%;
   height: 100%;
 }
+.service-area {
+  background-color: var(--color-white);
+  padding-block: calc(var(--spacing) * 25);
+}
+.service-intro {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 3);
+}
+.service-title {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 4);
+  text-align: center;
+}
+.single-service-list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 2.75);
+  border-radius: var(--radius-2xl);
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+  border-color: var(--color-04);
+  padding: calc(var(--spacing) * 8);
+}
+.service-icon {
+  position: absolute;
+  top: calc(var(--spacing) * 8);
+  right: calc(var(--spacing) * 8);
+  width: calc(var(--spacing) * 16);
+  height: calc(var(--spacing) * 16);
+}
 @property --tw-rotate-x {
   syntax: "*";
   inherits: false;
@@ -763,11 +807,6 @@ header {
   syntax: "*";
   inherits: false;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-duration {
   syntax: "*";
   inherits: false;
@@ -784,7 +823,6 @@ header {
       --tw-leading: initial;
       --tw-font-weight: initial;
       --tw-tracking: initial;
-      --tw-outline-style: solid;
       --tw-duration: initial;
     }
   }
