@@ -94,7 +94,7 @@ body{
     @apply text-lg font-normal leading-7 tracking-[-0.36px];
 }
 .s-p-2{
-    @apply text-lg font-normal leading-6.5 tracking-[-0.32px];
+    @apply text-base font-normal leading-6.5 tracking-[-0.32px];
 }
 .s-h{
     @apply tracking-[-1.12px] text-56x leading-16 font-semibold;
@@ -240,13 +240,13 @@ header{
     @apply flex gap-6 justify-center;
 }
 .up-bg-1{
-    @apply w-67 h-108.5 overflow-hidden; 
+    @apply md:w-67 md:h-108.5 overflow-hidden; 
 }
 .up-bg-1 img{
     @apply size-full;
 }
 .up-bg-2{
-    @apply w-67 h-97.5 overflow-hidden mt-25; 
+    @apply md:w-67 md:h-97.5 overflow-hidden mt-25; 
 }
 .up-bg-2 img{
     @apply size-full;
@@ -271,4 +271,26 @@ header{
 }
 .single-yn-list{
     @apply p-6 flex flex-col gap-2.75 bg-[#232323] rounded-2xl ;
+}
+
+/*--------------------Contact us ---------------------- */
+.cu-area{
+    @apply py-25 bg-white;
+}
+
+/*--------------------Footer ---------------------- */
+.single-footer{
+    @apply flex flex-col gap-6;
+}
+.single-footer ul{
+    @apply flex flex-col gap-4;
+}
+.single-footer ul li a{
+    @apply text-base font-normal leading-6.5 tracking-[-0.32px] text-white opacity-[0.7];
+}
+.single-footer ul li a.active{
+    @apply underline;
+}
+.footer-divider{
+    @apply h-0.25 bg-[#ECECEC] opacity-[0.1]
 }
