@@ -150,3 +150,8 @@ header{
 .hero-content h1{
     @apply lg:text-72x md:text-56x text-48x leading-15 text-center font-semibold md:leading-20 tracking-[-1.44px];
 }
+
+/*------------------------ Social Proof Section---------------------------- */
+.social-proof{
+    @apply py-15;
+}

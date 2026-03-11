@@ -503,6 +503,9 @@ header {
     font-size: var(--text-72x);
   }
 }
+.social-proof {
+  padding-block: calc(var(--spacing) * 15);
+}
 @property --tw-rotate-x {
   syntax: "*";
   inherits: false;
