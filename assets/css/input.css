@@ -58,11 +58,56 @@
 
 @theme{
     --font-oswald: "Oswald";
+    --color-primary:#FFA500;
+    --color-02:#151515;
+    --color-03:#4F4D4D;
+    --text-72x:4.5rem;
+    --text-48x:2.5rem;
+    --text-56x:3.5rem;
+
 }
 
+/* ---------------Basic Set Up -----------------------*/
 body{
     @apply font-oswald;
 }
 .container{
-    @apply xl:max-w-300 mx-auto lg:max-w-230 lg:px-0 md:px-8 px-4;
+    @apply xl:max-w-300 mx-auto lg:max-w-230 lg:px-0 md:px-8 px-4; 
+}
+
+
+/*============================= Header Area ============================ */
+header{
+    @apply py-6 bg-white;
+}
+.site-logo{
+    @apply size-8 overflow-hidden;
+}
+.site-logo img{
+    @apply w-full h-full;
+}
+.mainmenu{
+    @apply flex gap-12 items-center;
+}
+.mainmenu ul{
+    @apply flex gap-8 items-center;
+}
+.header-btn a{
+    @apply py-3 px-5 inline-block bg-primary text-white rounded-[40px] border-r-3 border-b-3 border-black font-medium text-sm leading-4 tracking-[-0.28px];
+}
+
+/* ---------------Mobile Menu------------------------- */
+.mobile-menu-icon{
+    @apply flex flex-col gap-1 cursor-pointer;
+}
+.mainmenu-mobile ul{
+    @apply flex flex-col text-center gap-3;
+}
+
+.mainmenu-mobile .header-btn{
+    @apply text-center
+}
+
+.mainmenu-mobile {
+    @apply flex flex-col gap-4 hidden;
 }

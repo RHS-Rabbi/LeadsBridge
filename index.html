@@ -7,8 +7,52 @@
     <link rel="stylesheet" href="/assets/css/output.css">
 </head>
 <body>
-    <div class="container">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates explicabo accusamus maxime quia laudantium voluptatem nemo consequatur ipsa, quaerat, praesentium atque veniam aut, sed quisquam nostrum recusandae? Praesentium, corrupti minus.
-    </div>
+    <header>
+        <div class="container">
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex justify-between items-center">
+                <div class="site-logo">
+                    <a href="#">
+                        <img src="/assets/img/Logo.png" alt="Site Logo" loading="lazy">
+                    </a>
+                </div>
+                <nav class="mainmenu">
+                    <ul>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                    <div class="header-btn">
+                        <a href="#">Book a Free Consultation</a>
+                    </div>
+                </nav>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="flex lg:hidden justify-between items-center relative">
+                <div class="site-logo">
+                    <a href="#">
+                        <img src="/assets/img/Logo.png" alt="Site Logo" loading="lazy">
+                    </a>
+                </div>
+                <div id="mobile-menu" class="mobile-menu-icon">
+                    <span class="w-5 h-0.5 rounded-full bg-02 inline-block"></span>
+                    <span class="w-5 h-0.5 rounded-full bg-02 inline-block"></span>
+                    <span class="w-5 h-0.5 rounded-full bg-02 inline-block"></span>
+                </div>
+            </div>
+            <nav class="mainmenu-mobile">
+                <ul>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <div class="header-btn">
+                    <a href="#">Book a Free Consultation</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <script></script>
 </body>
 </html>
