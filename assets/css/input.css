@@ -68,6 +68,7 @@
 
 }
 
+
 /* ---------------Basic Set Up -----------------------*/
 body{
     @apply font-oswald not-italic;
@@ -78,6 +79,9 @@ body{
 
 .btn{
     @apply py-3 px-8 inline-block bg-primary text-white rounded-[40px] border-r-3 border-b-3 border-black font-medium text-sm leading-4 tracking-[-0.28px];
+}
+.btn-w{
+    @apply py-3 px-8 inline-block bg-primary text-white rounded-[40px] border-r-3 border-b-3 border-white font-medium text-sm leading-4 tracking-[-0.28px];
 }
 /* h1,h2,h3,h4,h5,h6{
     @apply text-02;
@@ -91,6 +95,9 @@ body{
 }
 .s-p-2{
     @apply text-lg font-normal leading-6.5 tracking-[-0.32px];
+}
+.s-h{
+    @apply tracking-[-1.12px] text-56x leading-16 font-semibold;
 }
 
 /*============================= Header Area ============================ */
@@ -223,4 +230,28 @@ header{
 }
 .service-icon {
     @apply absolute top-8 right-8 size-16;
+}
+
+/*------------------------ Our Approach  ---------------------------- */
+.up-area{
+    @apply bg-02 py-25;
+}
+.up-left-content{
+    @apply flex gap-6 justify-center;
+}
+.up-bg-1{
+    @apply w-67 h-108.5 overflow-hidden; 
+}
+.up-bg-1 img{
+    @apply size-full;
+}
+.up-bg-2{
+    @apply w-67 h-97.5 overflow-hidden mt-25; 
+}
+.up-bg-2 img{
+    @apply size-full;
+}
+
+.up-divider{
+    @apply h-0.25 bg-[#404040] w-full
 }

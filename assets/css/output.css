@@ -212,6 +212,9 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .mb-15 {
+    margin-bottom: calc(var(--spacing) * 15);
+  }
   .flex {
     display: flex;
   }
@@ -230,8 +233,14 @@
   .h-0\.5 {
     height: calc(var(--spacing) * 0.5);
   }
+  .h-8 {
+    height: calc(var(--spacing) * 8);
+  }
   .h-12 {
     height: calc(var(--spacing) * 12);
+  }
+  .w-0\.5 {
+    width: calc(var(--spacing) * 0.5);
   }
   .w-0\.75 {
     width: calc(var(--spacing) * 0.75);
@@ -254,11 +263,11 @@
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
-  .grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
   .flex-col {
     flex-direction: column;
+  }
+  .flex-col-reverse {
+    flex-direction: column-reverse;
   }
   .items-center {
     align-items: center;
@@ -275,6 +284,9 @@
   .gap-4 {
     gap: calc(var(--spacing) * 4);
   }
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
+  }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
   }
@@ -287,6 +299,9 @@
   .gap-20 {
     gap: calc(var(--spacing) * 20);
   }
+  .rounded-\[30px\] {
+    border-radius: 30px;
+  }
   .rounded-full {
     border-radius: calc(infinity * 1px);
   }
@@ -297,14 +312,24 @@
   .bg-02 {
     background-color: var(--color-02);
   }
+  .bg-\[\#404040\] {
+    background-color: #404040;
+  }
   .bg-primary {
     background-color: var(--color-primary);
+  }
+  .py-4 {
+    padding-block: calc(var(--spacing) * 4);
   }
   .pt-10 {
     padding-top: calc(var(--spacing) * 10);
   }
   .text-center {
     text-align: center;
+  }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
   .text-lg {
     font-size: var(--text-lg);
@@ -315,6 +340,10 @@
   }
   .text-56x {
     font-size: var(--text-56x);
+  }
+  .leading-8 {
+    --tw-leading: calc(var(--spacing) * 8);
+    line-height: calc(var(--spacing) * 8);
   }
   .leading-12 {
     --tw-leading: calc(var(--spacing) * 12);
@@ -339,6 +368,10 @@
   .tracking-\[-0\.36px\] {
     --tw-tracking: -0.36px;
     letter-spacing: -0.36px;
+  }
+  .tracking-\[-0\.48px\] {
+    --tw-tracking: -0.48px;
+    letter-spacing: -0.48px;
   }
   .tracking-\[-1\.12px\] {
     --tw-tracking: -1.12px;
@@ -476,6 +509,27 @@ body {
   letter-spacing: -0.28px;
   color: var(--color-white);
 }
+.btn-w {
+  display: inline-block;
+  border-radius: 40px;
+  border-right-style: var(--tw-border-style);
+  border-right-width: 3px;
+  border-bottom-style: var(--tw-border-style);
+  border-bottom-width: 3px;
+  border-color: var(--color-white);
+  background-color: var(--color-primary);
+  padding-inline: calc(var(--spacing) * 8);
+  padding-block: calc(var(--spacing) * 3);
+  font-size: var(--text-sm);
+  line-height: var(--tw-leading, var(--text-sm--line-height));
+  --tw-leading: calc(var(--spacing) * 4);
+  line-height: calc(var(--spacing) * 4);
+  --tw-font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-medium);
+  --tw-tracking: -0.28px;
+  letter-spacing: -0.28px;
+  color: var(--color-white);
+}
 .s-p {
   font-size: var(--text-lg);
   line-height: var(--tw-leading, var(--text-lg--line-height));
@@ -495,6 +549,15 @@ body {
   font-weight: var(--font-weight-normal);
   --tw-tracking: -0.32px;
   letter-spacing: -0.32px;
+}
+.s-h {
+  font-size: var(--text-56x);
+  --tw-leading: calc(var(--spacing) * 16);
+  line-height: calc(var(--spacing) * 16);
+  --tw-font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-semibold);
+  --tw-tracking: -1.12px;
+  letter-spacing: -1.12px;
 }
 header {
   background-size: cover;
@@ -769,6 +832,39 @@ header {
   right: calc(var(--spacing) * 8);
   width: calc(var(--spacing) * 16);
   height: calc(var(--spacing) * 16);
+}
+.up-area {
+  background-color: var(--color-02);
+  padding-block: calc(var(--spacing) * 25);
+}
+.up-left-content {
+  display: flex;
+  justify-content: center;
+  gap: calc(var(--spacing) * 6);
+}
+.up-bg-1 {
+  height: calc(var(--spacing) * 108.5);
+  width: calc(var(--spacing) * 67);
+  overflow: hidden;
+}
+.up-bg-1 img {
+  width: 100%;
+  height: 100%;
+}
+.up-bg-2 {
+  margin-top: calc(var(--spacing) * 25);
+  height: calc(var(--spacing) * 97.5);
+  width: calc(var(--spacing) * 67);
+  overflow: hidden;
+}
+.up-bg-2 img {
+  width: 100%;
+  height: 100%;
+}
+.up-divider {
+  height: calc(var(--spacing) * 0.25);
+  width: 100%;
+  background-color: #404040;
 }
 @property --tw-rotate-x {
   syntax: "*";
