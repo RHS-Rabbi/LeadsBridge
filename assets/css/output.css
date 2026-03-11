@@ -212,6 +212,12 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .mb-3 {
+    margin-bottom: calc(var(--spacing) * 3);
+  }
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
+  }
   .mb-15 {
     margin-bottom: calc(var(--spacing) * 15);
   }
@@ -413,6 +419,11 @@
   .lg\:max-w-140 {
     @media (width >= 64rem) {
       max-width: calc(var(--spacing) * 140);
+    }
+  }
+  .lg\:grid-cols-3 {
+    @media (width >= 64rem) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
   .lg\:grid-cols-4 {
@@ -865,6 +876,20 @@ header {
   height: calc(var(--spacing) * 0.25);
   width: 100%;
   background-color: #404040;
+}
+.ha-area {
+  background-color: var(--color-white);
+  padding-block: calc(var(--spacing) * 25);
+}
+.single-ha-list {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 2.75);
+  border-radius: var(--radius-2xl);
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+  border-color: var(--color-04);
+  padding: calc(var(--spacing) * 6);
 }
 @property --tw-rotate-x {
   syntax: "*";
