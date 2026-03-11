@@ -515,6 +515,7 @@ header {
   padding-block: calc(var(--spacing) * 15);
 }
 .social-proof-title {
+  text-align: center;
   font-size: var(--text-2xl);
   line-height: var(--tw-leading, var(--text-2xl--line-height));
   --tw-leading: calc(var(--spacing) * 8);

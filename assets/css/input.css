@@ -156,5 +156,5 @@ header{
     @apply py-15;
 }
 .social-proof-title{
-    @apply text-2xl font-semibold leading-8 tracking-[-0.48px]; 
+    @apply text-2xl font-semibold leading-8 tracking-[-0.48px] text-center; 
 }
