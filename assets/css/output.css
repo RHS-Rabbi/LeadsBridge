@@ -7,8 +7,10 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --spacing: 0.25rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --font-oswald: "Oswald";
   }
 }
 @layer base {
@@ -160,6 +162,9 @@
   }
 }
 @layer utilities {
+  .static {
+    position: static;
+  }
   .container {
     width: 100%;
     @media (width >= 40rem) {
@@ -178,36 +183,79 @@
       max-width: 96rem;
     }
   }
-  .mx-auto {
-    margin-inline: auto;
-  }
   .table {
     display: table;
   }
   .border-collapse {
     border-collapse: collapse;
   }
-  .resize {
-    resize: both;
-  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .underline {
-    text-decoration-line: underline;
+}
+@font-face {
+  font-family: 'Oswald';
+  src: url('/assets/fonts/Oswald/Oswald-Bold.woff2') format('woff2'), url('/assets/fonts/Oswald/Oswald-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Oswald';
+  src: url('/assets/fonts/Oswald/Oswald-Light.woff2') format('woff2'), url('/assets/fonts/Oswald/Oswald-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Oswald';
+  src: url('/assets/fonts/Oswald/Oswald-ExtraLight.woff2') format('woff2'), url('/assets/fonts/Oswald/Oswald-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Oswald';
+  src: url('/assets/fonts/Oswald/Oswald-Medium.woff2') format('woff2'), url('/assets/fonts/Oswald/Oswald-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Oswald';
+  src: url('/assets/fonts/Oswald/Oswald-Regular.woff2') format('woff2'), url('/assets/fonts/Oswald/Oswald-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Oswald';
+  src: url('/assets/fonts/Oswald/Oswald-SemiBold.woff2') format('woff2'), url('/assets/fonts/Oswald/Oswald-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-family: var(--font-oswald);
+}
+.container {
+  margin-inline: auto;
+  padding-inline: calc(var(--spacing) * 4);
+  @media (width >= 48rem) {
+    padding-inline: calc(var(--spacing) * 8);
   }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
+  @media (width >= 64rem) {
+    max-width: calc(var(--spacing) * 230);
+  }
+  @media (width >= 64rem) {
+    padding-inline: calc(var(--spacing) * 0);
+  }
+  @media (width >= 80rem) {
+    max-width: calc(var(--spacing) * 300);
   }
 }
 @property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
-@property --tw-outline-style {
   syntax: "*";
   inherits: false;
   initial-value: solid;
@@ -216,7 +264,6 @@
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
-      --tw-outline-style: solid;
     }
   }
 }
