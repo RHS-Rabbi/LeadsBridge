@@ -12,12 +12,18 @@
     --spacing: 0.25rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
+    --text-base: 1rem;
+    --text-base--line-height: calc(1.5 / 1);
+    --font-weight-normal: 400;
     --font-weight-medium: 500;
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --font-oswald: "Oswald";
     --color-primary: #FFA500;
     --color-02: #151515;
+    --color-03: #4F4D4D;
   }
 }
 @layer base {
@@ -325,6 +331,18 @@ header {
   align-items: center;
   gap: calc(var(--spacing) * 8);
 }
+.mainmenu ul li a, .mainmenu-mobile ul li a {
+  font-size: var(--text-base);
+  line-height: var(--tw-leading, var(--text-base--line-height));
+  --tw-leading: calc(var(--spacing) * 6.5);
+  line-height: calc(var(--spacing) * 6.5);
+  --tw-font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-normal);
+  --tw-tracking: 0.32px;
+  letter-spacing: 0.32px;
+  color: var(--color-03);
+  text-transform: capitalize;
+}
 .header-btn a {
   display: inline-block;
   border-radius: 40px;
@@ -363,9 +381,31 @@ header {
 }
 .mainmenu-mobile {
   display: flex;
-  display: none;
   flex-direction: column;
   gap: calc(var(--spacing) * 4);
+}
+.mainmenu-mobile {
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: calc(var(--spacing) * 0);
+  width: 100%;
+  background-color: var(--color-white);
+  padding: calc(var(--spacing) * 5);
+  opacity: 0%;
+  transition-property: all;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 300ms;
+  transition-duration: 300ms;
+}
+.mainmenu-mobile.active {
+  visibility: visible;
+  display: flex;
+  opacity: 100%;
+}
+.mainmenu ul li .active, .mainmenu-mobile ul li .active {
+  color: var(--color-primary);
 }
 @property --tw-border-style {
   syntax: "*";
@@ -384,6 +424,10 @@ header {
   syntax: "*";
   inherits: false;
 }
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -391,6 +435,7 @@ header {
       --tw-leading: initial;
       --tw-font-weight: initial;
       --tw-tracking: initial;
+      --tw-duration: initial;
     }
   }
 }

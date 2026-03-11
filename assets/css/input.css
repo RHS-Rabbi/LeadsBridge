@@ -92,6 +92,9 @@ header{
 .mainmenu ul{
     @apply flex gap-8 items-center;
 }
+.mainmenu ul li a, .mainmenu-mobile ul li a{
+    @apply text-03 capitalize font-normal leading-6.5 tracking-[0.32px] text-base;
+}
 .header-btn a{
     @apply py-3 px-5 inline-block bg-primary text-white rounded-[40px] border-r-3 border-b-3 border-black font-medium text-sm leading-4 tracking-[-0.28px];
 }
@@ -105,9 +108,21 @@ header{
 }
 
 .mainmenu-mobile .header-btn{
-    @apply text-center
+    @apply text-center;
 }
 
 .mainmenu-mobile {
-    @apply flex flex-col gap-4 hidden;
+    @apply flex flex-col gap-4;
+}
+
+.mainmenu-mobile{
+    @apply absolute top-full left-0 w-full bg-white p-5 opacity-0 transition-all duration-300 invisible;
+}
+
+.mainmenu-mobile.active{
+    @apply flex opacity-100 visible;
+}
+
+.mainmenu ul li .active, .mainmenu-mobile ul li .active{
+    @apply text-primary;
 }
