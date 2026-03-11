@@ -521,6 +521,8 @@ header {
   line-height: calc(var(--spacing) * 8);
   --tw-font-weight: var(--font-weight-semibold);
   font-weight: var(--font-weight-semibold);
+  --tw-tracking: -0.48px;
+  letter-spacing: -0.48px;
 }
 @property --tw-rotate-x {
   syntax: "*";
