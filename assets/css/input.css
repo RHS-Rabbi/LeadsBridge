@@ -148,5 +148,5 @@ header{
     @apply max-w-205 mx-auto flex flex-col justify-center gap-4;
 }
 .hero-content h1{
-    @apply text-72x text-center font-semibold leading-20 tracking-[-1.44px];
+    @apply lg:text-72x md:text-56x text-48x leading-15 text-center font-semibold md:leading-20 tracking-[-1.44px];
 }

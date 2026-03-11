@@ -26,6 +26,8 @@
     --color-02: #151515;
     --color-03: #4F4D4D;
     --text-72x: 4.5rem;
+    --text-48x: 2.5rem;
+    --text-56x: 3.5rem;
   }
 }
 @layer base {
@@ -483,13 +485,23 @@ header {
 }
 .hero-content h1 {
   text-align: center;
-  font-size: var(--text-72x);
-  --tw-leading: calc(var(--spacing) * 20);
-  line-height: calc(var(--spacing) * 20);
+  font-size: var(--text-48x);
+  --tw-leading: calc(var(--spacing) * 15);
+  line-height: calc(var(--spacing) * 15);
   --tw-font-weight: var(--font-weight-semibold);
   font-weight: var(--font-weight-semibold);
   --tw-tracking: -1.44px;
   letter-spacing: -1.44px;
+  @media (width >= 48rem) {
+    font-size: var(--text-56x);
+  }
+  @media (width >= 48rem) {
+    --tw-leading: calc(var(--spacing) * 20);
+    line-height: calc(var(--spacing) * 20);
+  }
+  @media (width >= 64rem) {
+    font-size: var(--text-72x);
+  }
 }
 @property --tw-rotate-x {
   syntax: "*";
